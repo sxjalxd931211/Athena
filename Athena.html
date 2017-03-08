@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta  http-equiv="description" content="" />
+<meta http-equiv="keywords" content="" />
+<title>Athena</title>
+<link rel="stylesheet" href="css/css.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<script type="text/javascript" src="http://res.quan.tm/Resources/js/jquery/jquery-2.0.3.min.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".tagContent div").hide();
+	$(".tags_row li:first").attr("class","current");
+	$(".tagContent div:first").fadeIn();
+	$('.tags_row a').click(function(e){
+		e.preventDefault();
+		$(".tagContent div").hide();
+		$(".tags_row li").attr("class","");
+		$(this).parent().attr("class","current");
+		$('#'+$(this).attr('title')).fadeIn();
+		})
+})
+</script>
+
+<!--head-->
+<div>
+	<div class="layout head link left tags_row" valign="center">
+		<ul>
+	      <li><a href="javascript:void(0)" title="tagContent0">Home</a></li>
+	      <li><a href="javascript:void(0)" title="tagContent1">Contents</a></li>
+	      <li><a href="javascript:void(0)" title="tagContent2">Proposal</a></li>
+	      <li><a href="javascript:void(0)" title="tagContent3">Video</a></li>
+	      <li><a href="javascript:void(0)" title="tagContent4">Timeline</a></li>
+	      <li><a href="javascript:void(0)" title="tagContent5">About Us</a></li> 
+	    </ul>
+    </div>
+</div>
+<!--head-->
+
+<!--Title-->
+<div class="layout background">
+	<p class="title_athena">Athena</p>
+</div>
+<!--Title end-->
+
+<!--Tag-->
+<div class="tagContent header">
+    <!--tag Home-->
+	<div class="object_frame header Home_all" id="tagContent0" >
+		<table border="4">
+			<tr>
+				<th colspan="5">Group 7</th>
+			</tr>
+			<tr>
+				<td>Florencia</td>
+				<td>Laura</td>
+				<td>Fangzhou Liu</td>
+				<td>Jing Sun</td>
+				<td>Mounica</td>
+			</tr>
+		</table>
+	</div>	
+    <!--tag Home end-->	
+
+
+	<!--tag Contents-->
+	<div class="Description_all header" id="tagContent1" >
+		<p id="Description_title">Project Description</p>
+		<p>Today, there is plenty of mobile applications and software intended to train the users in English pronunciation. However, their approach is different.</p>
+		<br/><br/>
+		<p>Instead of focusing on user intended content pronunciation, these applications are structured in an English course manner, where the user goes through different levels of knowledge and evolves through time. They offer an academic approach where each sound is to be practised based on fixed words that are provided. There are tools that outperform others, and those are normally paid. While the pronunciation feedback is present for free text that the user input, that is normally one of the complementary features of the app and users might not even know how to get there, or even will not even download the app because of the description and the difference in the app approach and the approach they are looking for, which we believe is a fast, straightforward feedback on their speech pronunciation.</p>
+		<img src="images/image1.jpg" alt="Current Pronunciation APP"/>
+		<p>We will provide that fast, straightforward feedback on users speech pronunciation. We envision an application that will obtain the text the user wants to pronounce, will provide the correct pronunciation, user will record and a feedback will be provided. We will get details on feedback as we perform interviews, but we imagine that the text will be presented to the user with colors indicating whether the word was pronounced correctly: from green if pronunciation is accurate to red if the word was mispronounced. For those mispronounced, the user will be able to click on them to listen the right pronunciation and practice to record again and get feedback (check our video!); so on till the user is satisfied or the word is pronounced correctly. Additionally, a percentage score will be displayed. For more details on this score, please check out the implementation section.</p>
+		<br/><br/>
+		<p>How the application will obtain the text is another objective of the needfinding we will perform. We believe typing and recording might be the most useful methods, but we want to get that information from users. We also believe other features such as synonym finding based on input speech might be another nice feature to have. It would help people who lack vocabulary.</p>
+		<img src="images/image2.jpg" alt="Athena"/>
+	</div>	
+	<!--tag Contents end-->			
+
+
+	<!--tag Proposal-->
+	<div class="object_frame header" id="tagContent2" >
+		<embed src="AthenaFinalProjectProposal.pdf#toolbar=0&navpanes=0&scrollbar=1" class="iframe_style header" width="100%" height="100%"></embed>
+	</div>	
+	<!--tag Proposal end-->			
+
+
+	<!--tag Video-->
+	<div class="object_frame header" id="tagContent3" >
+		<p id="Video_enjoy">Please enjoy the concept vedio!</p>
+		<video src="images/Athena_Concept_Video.mp4" controls="controls"></video>
+	</div>	
+    <!--tag Video end-->	
+
+
+    <!--tag Timeline-->
+	<div class="object_frame header Time_all" id="tagContent4" >
+		<p>Here is a link to our current Timeline</p>
+		<a href="https://tinyurl.com/hu4jvph">https://tinyurl.com/hu4jvph</a>
+	</div>	
+    <!--tag Timeline end-->	
+
+
+    <!--tag Us-->
+	<div class="Us_all header" id="tagContent5" >
+		<table border="4">
+			<tr class="Us_auto_line">
+				<td>Team Member</td><td>Degree</td><td>Field of Study</td><td>Project Role</td><td>Past Experience</td><td>Skill Set</td>
+			</tr>
+			<tr class="Us_auto_line">
+				<td>Florencia</td><td>Masters</td><td>TEAM</td><td>Project manager, app design, video, poster</td><td>Bachelor’s in Systems Engineering; IT Project Manager for General Motors and Anheuser-Busch Inbev developing IT solutions for business users</td><td>Project Management, Photoshop, Illustrator, Video Editing, Python, C, SQL</td>
+			</tr>
+			<tr class="Us_auto_line">
+				<td>Laura</td><td>Fifth Year Take 5 undergrad</td><td>CS, Psychology</td><td>App development</td><td>Prior full stack software engineering internship at Etsy</td><td>Javascript, Java, SQL, PHP, git, HTML</td>
+			</tr>
+			<tr class="Us_auto_line">
+				<td>Fangzhou Liu</td><td>Masters</td><td>CS</td><td>Pronunciation comparison algorithm / app development</td><td>Bachelor’s in Telecommunications Engineering; prior iOS software engineering intern at a startup in Beijing</td><td>Java, Objective-C, Ruby, SQL, Web and Mobile development</td>
+			</tr>
+			<tr class="Us_auto_line">
+				<td>Jing Sun</td><td>Masters</td><td>CS</td><td>Web development</td><td>Bachelor’s in Information and Computing Science; worked as a web developer for one year</td><td>HTML, Javascript, jQuery, Objective-C, Java, SQL</td>
+			</tr>
+			<tr class="Us_auto_line">
+				<td>Mounica</td><td>Masters</td><td>TEAM</td><td>App design, video & poster, needfinding and evaluation techniques, prototype creation</td><td>Bachelor’s in Electronics and Instrumentation Engineering; worked as a systems engineer</td><td>SQL, Python, HTML, Excel, Wireframes, Poster creation</td>
+			</tr>
+		</table>
+	</div>	
+    <!--tag Us end-->	
+</div>
+<!--Tag end-->
+
+
+<!--foot-->
+<div>
+	
+</div>
+<!--foot end-->
+
+</body>

@@ -1,0 +1,173 @@
+.main{max-width: 640px;min-width: 320px;margin: auto;min-height: 100%;position: relative;}
+.main_pd{padding-bottom:100px;}
+.vw-content{position: relative;overflow: hidden;}
+footer{overflow: hidden;position: relative;z-index: 10;}
+footer .vw-copyright{color:#000;}
+footer a{color:#000!important; font-size:12px;}
+.vw-copyright, .weimob-support {color: #FFFFFF;}
+.vw-copyright {text-align: center;height: 48px;line-height: 48px;}
+.vw-support {text-align: center;text-decoration: none;display: block;font-size: 12px;height: 24px;line-height: 24px;background: #C0C0C0;background: -moz-linear-gradient(top,#303030,#383838);background: -ms-linear-gradient(top,#303030,#383838);background: -webkit-gradient(linear, 0 0, 0 100%, from(#303030), to(#383838));white-space: nowrap;color: #639639!important;}
+.vw-support a{color: #639639!important;}
+
+/*swiper*/
+#slider img {-ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    height: auto;
+	background: 0;
+}
+.swipe {  
+    overflow: hidden;  
+    visibility: hidden;  
+    position: relative;  
+}  
+.swipe-wrap {  
+    overflow: hidden;  
+    position: relative;  
+}  
+.swipe-wrap > figure {  
+    float: left;  
+    width: 100%;  
+    position: relative;  
+}  
+#slider {  
+    max-width: 640px;/* 设置最大的宽度 */  
+    margin: 0px auto; /* 居中对齐 */  
+}  
+  
+#slider figure {  
+    margin: 0;/* 对齐，四周宽度都为0，在轮播的时候，以整张图片进行移动 */  
+}  
+.page-swipe nav #position {  
+    position: absolute;
+	bottom:5px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}  
+.page-swipe nav #position li {  
+    display: inline-block;  
+    width:8px;  
+    height:8px;  
+    border-radius: 10px;  
+    background: #757575;  
+    margin: 0 2px;  
+    cursor: pointer  
+}  
+.page-swipe nav #position li.on {  
+    box-shadow: inset 0 1px 3px -1px #28b4ea,0 1px 2px rgba(0,0,0,.5);  
+    background-color: #fff;  
+}  
+/*底部工具条*/
+
+.bo_tab {
+	/*height:50px;*/
+	
+	position: relative;
+}
+.bo_tab_nav {
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.bo_tab ul {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	padding: 0;
+	background: #f8f6f7;
+	position: fixed;
+	bottom: 0;
+	left: 0px;
+	line-height: 20px;
+	color: #595959;
+	z-index: 999999999999;
+	border-top:1px solid #dad7d7;
+}
+.bo_tab li {
+	-webkit-box-flex: 1;
+	position: relative;
+	width: 20%;
+	height: 100%;
+	float: left;
+	text-align: center;
+}
+.bo_tab li a {
+	padding-top: 2px;
+	-webkit-box-flex: 1;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	height: 50px;
+}
+/*.fix_icon {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background:url(/Resources/img/circle/fixedicon.png);
+}*/
+.fix-home {
+	display: inline-block;
+	background: url(/Resources/images/circle/home.png) no-repeat;
+	background-size: 23px;
+	background-position: 4px 4px;
+	width: 32px;
+	height: 28px;
+}
+.fix-fl {
+	display: inline-block;
+	background: url(/Resources/images/circle/ffl.png) no-repeat;
+	background-size: 23px;
+	background-position: 4px 4px;
+	width: 32px;
+	height: 28px;
+}
+.fix-yic{
+	display: inline-block;
+	background: url(/Resources/images/circle/yhui.png) no-repeat;
+	background-size:23px;
+	background-position: 4px 4px;
+	width: 32px;
+	height:28px;
+}
+.fix-rzhu{
+	display: inline-block;
+	background: url(/Resources/images/circle/rzhu.png) no-repeat;
+	background-size:23px;
+	background-position: 4px 4px;
+	width: 32px;
+	height:28px;
+}
+.fix-gou {
+	display: inline-block;
+	background: url(/Resources/images/circle/gou.png) no-repeat;
+	background-size: 23px;
+	background-position: 4px 4px;
+	width: 32px;
+	height: 28px;
+}
+.fix-ddan {
+	display: inline-block;
+	background: url(/Resources/images/circle/ddan.png) no-repeat;
+	background-size: 23px;
+	background-position: 4px 4px;
+	width: 32px;
+	height: 28px;
+}
+.fix-cen {
+	display: inline-block;
+	background: url(/Resources/images/circle/cen.png) no-repeat;
+	background-size: 23px;
+	background-position: 4px 5px;
+	width: 32px;
+	height: 28px;
+}
+.bo_tab li p {
+	color: #333;
+	font: 400 12px/18px microsoft yahei;
+	text-align: center;
+	display: block;
+}

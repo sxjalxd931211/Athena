@@ -9,24 +9,12 @@
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link rel="stylesheet" href="css/reset.css" type="text/css" />
 <script type="text/javascript" src="http://res.quan.tm/Resources/js/jquery/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    $(".tagContent div").hide();
-	$(".tags_row li:first").attr("class","current");
-	$(".tagContent div:first").fadeIn();
-	$('.tags_row a').click(function(e){
-		e.preventDefault();
-		$(".tagContent div").hide();
-		$(".tags_row li").attr("class","");
-		$(this).parent().attr("class","current");
-		$('#'+$(this).attr('title')).fadeIn();
-		})
-})
-</script>
+
 
 <!--head-->
 <div>

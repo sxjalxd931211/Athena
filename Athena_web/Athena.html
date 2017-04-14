@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta  http-equiv="description" content="" />
+<meta http-equiv="keywords" content="" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<title>Athena</title>
+<link rel="stylesheet" href="css/css.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<script type="text/javascript" src="http://res.quan.tm/Resources/js/jquery/jquery-2.0.3.min.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+// $(document).ready(function(){
+// 	$("#tagContent0_m").parent().attr("class","current");
+// 	$('.tags_row a').click(function(e){
+// 		e.preventDefault();
+// 		$(".tags_row li").attr("class","");
+// 		$(this).parent().attr("class","current");
+// 		})
+// })
+
+$(document).ready(function(){
+	// $(window).resize(function(){
+	// if(document.body.clientWidth<1000){
+	// alert("No Resize!");
+	// window.resizeTo(document.body.clientWidth,1000);
+	// }
+	// });
+    $(".tagContent div").hide();
+	$(".tags_row li:first").attr("class","current");
+	$(".tagContent div:first").fadeIn();
+	$('.tags_row a').click(function(e){
+		e.preventDefault();
+		$(".tagContent div").hide();
+		$(".tags_row li").attr("class","");
+		$(this).parent().attr("class","current");
+		$('#'+$(this).attr('title')).fadeIn();
+		//$('#'+$(this).attr('title>div')).fadeIn();
+		})
+})
+function toEmail(){
+	var objFrm = document.frmEmail;
+	var objFrmEmail = document.frmEmail_hidden;
+	var msg = "";
+	msg += "Name: " + objFrm.name.value + " ";
+	msg += "Email: " + objFrm.email.value + " ";
+	objFrmEmail.message.value = msg;
+	objFrmEmail.action = "mailto:ivy_sj_2016@163.com?subject=" + objFrm.subject.value;
+	objFrmEmail.submit();
+}
+
+function vedioClick(){
+	document.getElementById("tagContent0").style.display = "block";
+	document.getElementById("tagContent1").style.display = "none";
+	document.getElementById("tagContent2").style.display = "none";
+	document.getElementById("tagContent3").style.display = "none";
+	window.location.hash = "#vedio_jump";
+}
+function workClick(){
+	document.getElementById("tagContent0").style.display = "block";
+	document.getElementById("tagContent1").style.display = "none";
+	document.getElementById("tagContent2").style.display = "none";
+	document.getElementById("tagContent3").style.display = "none";
+	window.location.hash = "#work_jump";
+}
+function usClick(){
+	document.getElementById("tagContent3").style.display = "block";
+	document.getElementById("tagContent0").style.display = "none";
+	document.getElementById("tagContent1").style.display = "none";
+	document.getElementById("tagContent2").style.display = "none";
+}
+
+</script>
+
+<!--head-->
+<div class="background_head">
+	<div class="label_head">
+		<img src="images/1.png" id="label_head_label"/>
+		<span id="label_head_title">Athena</span>
+		<div class="tags_row" valign="right">
+			<span id="jump_to_video" onclick="vedioClick()">CONCEPT VEDIO</span>
+		    <span id="jump_to_work" onclick="workClick()">HOW IT WORKS</span>
+			<ul>
+		      <li><a href="javascript:void(0)" title="tagContent0">HOME</a></li> 
+		      <li><a href="javascript:void(0)" title="tagContent1">PROPOSAL</a></li>
+		      <li><a href="javascript:void(0)" title="tagContent2">TIMELINE</a></li>
+		      <li><a href="javascript:void(0)" title="tagContent3">ABOUT US</a></li> 
+		    </ul>
+	    </div>
+	</div>
+	<div class="athena_head">
+		<img src="images/3.png"/>
+		<div class="athena_head_intro">
+			<p id="athena_head_intro_1">Need to improve your English pronunciation?      <span style="color:#f8356d;">ATHENA </span>is the answer</p>
+			<p id="athena_head_intro_2">The tool you were looking for to practice your speech, learn how to pronunce that entangled word, help you distringuish between similar sounding words, help your speaking being understood and more!</p>
+		</div>
+	</div>
+</div>
+<!--head-->
+
+
+
+<div class="tagContent header">
+<!--home-->
+<div id="tagContent0">
+<!--vedio-->
+<span class="vedio_frame header" id="vedio_jump">
+	<video src="images/Athena_Concept_Video.mp4" controls="controls"></video>
+	<center><button>See More</button></center>
+</span>
+<!--vedio-->
+
+<!--how it works-->
+<span class="athena_work" id="work_jump">
+	<p class="athena_work_title">What is ATHENA and how does it work</p>
+	<p class="athena_work_intro">Athena is a mobile app created by University of Rochester students to help you improve your English pronunciation. We saw the need of this tool for many of our international students and we would love to help them!</p>
+	<span class="athena_work_lay">
+		<ul>
+			<li><img src="images/group_1.png"/></li>
+			<li><img src="images/group_2.png"/></li>
+			<li><img src="images/group_3.png"/></li>
+			<li><img src="images/group_4.png"/></li>
+			<li><img src="images/group_5.png"/></li>
+			<li><img src="images/group_6.png"/></li>
+		</ul>
+	</span>
+</span>
+<!--how it works-->
+
+<!--the team-->
+<span class="team_athena">
+	<p class="team_title">The TEAM</p>
+	<center><img src="images/image.png"/></center>
+	<a href="javascript:void(0)" class="team_more" onClick="usClick()">Want to know more about us?</a>
+</span>
+<!--the team-->
+</div>
+<!--home-->
+
+
+<!--proposal-->
+<div class="athena_proposal header"  id="tagContent1">
+	<embed src="AthenaFinalProjectProposal.pdf" toolbar=0 navpanes=0 scrollbar=1 width="100%" height="100%"></embed>	
+</div>
+<!--proposal-->
+
+
+
+<!--proposal-->
+<div class="athena_proposal header" id="tagContent2">
+	1
+</div>
+<!--proposal-->
+
+
+<!--proposal-->
+<div class="athena_proposal header" id="tagContent3">
+	2
+</div>
+</div>
+
+
+<!--say hi-->
+<div class="say_hi">
+	<p>SAY HI</p>
+	<form name="frmEmail_hidden" action="" method="post" enctype="text/plain">
+		<input type="hidden" name="message" value="">
+	</form>
+	<form name="frmEmail" action="" method="post" class="frm_email">
+		<input type="text" name="name" placeholder="Your Name" id="name_send">
+		<input type="text" name="email" placeholder="Your Email" id="email_send"><br/>
+		<textarea name="message" placeholder="Your Message..." id="message_send"></textarea><br/>
+		<center><input type="button" name="send" value="Send Message"  id="button_send" onlick="toEmail()"></center>
+	</form>
+</div>
+<!--say hi-->
+
+
+
+
+
+
+<br/><br/><br/><br/><br/>
+
+
+
+</body>

@@ -4,129 +4,189 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta  http-equiv="description" content="" />
 <meta http-equiv="keywords" content="" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 <title>Athena</title>
 <link rel="stylesheet" href="css/css.css" type="text/css" />
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link rel="stylesheet" href="css/reset.css" type="text/css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="http://res.quan.tm/Resources/js/jquery/jquery-2.0.3.min.js"></script>
 </head>
 
 <body>
 
+<script type="text/javascript">
+// $(document).ready(function(){
+// 	$("#tagContent0_m").parent().attr("class","current");
+// 	$('.tags_row a').click(function(e){
+// 		e.preventDefault();
+// 		$(".tags_row li").attr("class","");
+// 		$(this).parent().attr("class","current");
+// 		})
+// })
 
+$(document).ready(function(){
+	// $(window).resize(function(){
+	// if(document.body.clientWidth<1000){
+	// alert("No Resize!");
+	// window.resizeTo(document.body.clientWidth,1000);
+	// }
+	// });
+    $(".tagContent div").hide();
+	$(".tags_row li:first").attr("class","current");
+	$(".tagContent div:first").fadeIn();
+	$('.tags_row a').click(function(e){
+		e.preventDefault();
+		$(".tagContent div").hide();
+		$(".tags_row li").attr("class","");
+		$(this).parent().attr("class","current");
+		$('#'+$(this).attr('title')).fadeIn();
+		//$('#'+$(this).attr('title>div')).fadeIn();
+		})
+})
+function toEmail(){
+	var objFrm = document.frmEmail;
+	var objFrmEmail = document.frmEmail_hidden;
+	var msg = "";
+	msg += "Name: " + objFrm.name.value + " ";
+	msg += "Email: " + objFrm.email.value + " ";
+	objFrmEmail.message.value = msg;
+	objFrmEmail.action = "mailto:ivy_sj_2016@163.com?subject=" + objFrm.subject.value;
+	objFrmEmail.submit();
+}
+
+function vedioClick(){
+	document.getElementById("tagContent0").style.display = "block";
+	document.getElementById("tagContent1").style.display = "none";
+	document.getElementById("tagContent2").style.display = "none";
+	document.getElementById("tagContent3").style.display = "none";
+	window.location.hash = "#vedio_jump";
+}
+function workClick(){
+	document.getElementById("tagContent0").style.display = "block";
+	document.getElementById("tagContent1").style.display = "none";
+	document.getElementById("tagContent2").style.display = "none";
+	document.getElementById("tagContent3").style.display = "none";
+	window.location.hash = "#work_jump";
+}
+function usClick(){
+	document.getElementById("tagContent3").style.display = "block";
+	document.getElementById("tagContent0").style.display = "none";
+	document.getElementById("tagContent1").style.display = "none";
+	document.getElementById("tagContent2").style.display = "none";
+}
+
+</script>
 
 <!--head-->
-<div>
-	<div class="layout head link left tags_row" valign="center">
-		<ul>
-	      <li><a href="javascript:void(0)" title="tagContent0">Home</a></li>
-	      <li><a href="javascript:void(0)" title="tagContent1">Contents</a></li>
-	      <li><a href="javascript:void(0)" title="tagContent2">Proposal</a></li>
-	      <li><a href="javascript:void(0)" title="tagContent3">Video</a></li>
-	      <li><a href="javascript:void(0)" title="tagContent4">Timeline</a></li>
-	      <li><a href="javascript:void(0)" title="tagContent5">About Us</a></li>
-	    </ul>
-    </div>
+<div class="background_head">
+	<div class="label_head">
+		<img src="images/1.png" id="label_head_label"/>
+		<span id="label_head_title">Athena</span>
+		<div class="tags_row" valign="right">
+			<span id="jump_to_video" onclick="vedioClick()">CONCEPT VEDIO</span>
+		    <span id="jump_to_work" onclick="workClick()">HOW IT WORKS</span>
+			<ul>
+		      <li><a href="javascript:void(0)" title="tagContent0">HOME</a></li> 
+		      <li><a href="javascript:void(0)" title="tagContent1">PROPOSAL</a></li>
+		      <li><a href="javascript:void(0)" title="tagContent2">TIMELINE</a></li>
+		      <li><a href="javascript:void(0)" title="tagContent3">ABOUT US</a></li> 
+		    </ul>
+	    </div>
+	</div>
+	<div class="athena_head">
+		<img src="images/3.png"/>
+		<div class="athena_head_intro">
+			<p id="athena_head_intro_1">Need to improve your English pronunciation?      <span style="color:#f8356d;">ATHENA </span>is the answer</p>
+			<p id="athena_head_intro_2">The tool you were looking for to practice your speech, learn how to pronunce that entangled word, help you distringuish between similar sounding words, help your speaking being understood and more!</p>
+		</div>
+	</div>
 </div>
 <!--head-->
 
-<!--Title-->
-<div class="layout background">
-	<p class="title_athena">Athena</p>
-</div>
-<!--Title end-->
 
-<!--Tag-->
+
 <div class="tagContent header">
-    <!--tag Home-->
-	<div class="object_frame header Home_all" id="tagContent0" >
-		<table border="4">
-			<tr>
-				<th colspan="5">Group 7</th>
-			</tr>
-			<tr>
-				<td>Florencia</td>
-				<td>Laura</td>
-				<td>Fangzhou Liu</td>
-				<td>Jing Sun</td>
-				<td>Mounica</td>
-			</tr>
-		</table>
-	</div>
-    <!--tag Home end-->
+<!--home-->
+<div id="tagContent0">
+<!--vedio-->
+<span class="vedio_frame header" id="vedio_jump">
+	<video src="images/Athena_Concept_Video.mp4" controls="controls"></video>
+	<center><button>See More</button></center>
+</span>
+<!--vedio-->
 
+<!--how it works-->
+<span class="athena_work" id="work_jump">
+	<p class="athena_work_title">What is ATHENA and how does it work</p>
+	<p class="athena_work_intro">Athena is a mobile app created by University of Rochester students to help you improve your English pronunciation. We saw the need of this tool for many of our international students and we would love to help them!</p>
+	<span class="athena_work_lay">
+		<ul>
+			<li><img src="images/group_1.png"/></li>
+			<li><img src="images/group_2.png"/></li>
+			<li><img src="images/group_3.png"/></li>
+			<li><img src="images/group_4.png"/></li>
+			<li><img src="images/group_5.png"/></li>
+			<li><img src="images/group_6.png"/></li>
+		</ul>
+	</span>
+</span>
+<!--how it works-->
 
-	<!--tag Contents-->
-	<div class="Description_all header" id="tagContent1" >
-		<p id="Description_title">Project Description</p>
-		<p>Today, there is plenty of mobile applications and software intended to train the users in English pronunciation. However, their approach is different.</p>
-		<br/><br/>
-		<p>Instead of focusing on user intended content pronunciation, these applications are structured in an English course manner, where the user goes through different levels of knowledge and evolves through time. They offer an academic approach where each sound is to be practised based on fixed words that are provided. There are tools that outperform others, and those are normally paid. While the pronunciation feedback is present for free text that the user input, that is normally one of the complementary features of the app and users might not even know how to get there, or even will not even download the app because of the description and the difference in the app approach and the approach they are looking for, which we believe is a fast, straightforward feedback on their speech pronunciation.</p>
-		<img src="images/image1.jpg" alt="Current Pronunciation APP"/>
-		<p>We will provide that fast, straightforward feedback on users speech pronunciation. We envision an application that will obtain the text the user wants to pronounce, will provide the correct pronunciation, user will record and a feedback will be provided. We will get details on feedback as we perform interviews, but we imagine that the text will be presented to the user with colors indicating whether the word was pronounced correctly: from green if pronunciation is accurate to red if the word was mispronounced. For those mispronounced, the user will be able to click on them to listen the right pronunciation and practice to record again and get feedback (check our video!); so on till the user is satisfied or the word is pronounced correctly. Additionally, a percentage score will be displayed. For more details on this score, please check out the implementation section.</p>
-		<br/><br/>
-		<p>How the application will obtain the text is another objective of the needfinding we will perform. We believe typing and recording might be the most useful methods, but we want to get that information from users. We also believe other features such as synonym finding based on input speech might be another nice feature to have. It would help people who lack vocabulary.</p>
-		<img src="images/image2.jpg" alt="Athena"/>
-	</div>
-	<!--tag Contents end-->
-
-
-	<!--tag Proposal-->
-	<div class="object_frame header" id="tagContent2" >
-		<embed src="AthenaFinalProjectProposal.pdf#toolbar=0&navpanes=0&scrollbar=1" class="iframe_style header" width="100%" height="100%"></embed>
-	</div>
-	<!--tag Proposal end-->
-
-
-	<!--tag Video-->
-	<div class="object_frame header" id="tagContent3" >
-		<p id="Video_enjoy">Please enjoy the concept video!</p>
-		<video src="images/Athena_Concept_Video.mp4" controls="controls"></video>
-	</div>
-    <!--tag Video end-->
-
-
-    <!--tag Timeline-->
-	<div class="object_frame header Time_all" id="tagContent4" >
-		<p>Here is a link to our current Timeline</p>
-		<a href="https://tinyurl.com/hu4jvph">https://tinyurl.com/hu4jvph</a>
-	</div>
-    <!--tag Timeline end-->
-
-
-    <!--tag Us-->
-	<div class="Us_all header" id="tagContent5" >
-		<table border="4">
-			<tr class="Us_auto_line">
-				<td>Team Member</td><td>Degree</td><td>Field of Study</td><td>Project Role</td><td>Past Experience</td><td>Skill Set</td>
-			</tr>
-			<tr class="Us_auto_line">
-				<td>Florencia</td><td>Masters</td><td>TEAM</td><td>Project manager, app design, video, poster</td><td>Bachelor’s in Systems Engineering; IT Project Manager for General Motors and Anheuser-Busch Inbev developing IT solutions for business users</td><td>Project Management, Photoshop, Illustrator, Video Editing, Python, C, SQL</td>
-			</tr>
-			<tr class="Us_auto_line">
-				<td>Laura</td><td>Fifth Year Take 5 undergrad</td><td>CS, Psychology</td><td>App development</td><td>Prior full stack software engineering internship at Etsy</td><td>Javascript, Java, SQL, PHP, git, HTML</td>
-			</tr>
-			<tr class="Us_auto_line">
-				<td>Fangzhou Liu</td><td>Masters</td><td>CS</td><td>Pronunciation comparison algorithm / app development</td><td>Bachelor’s in Telecommunications Engineering; prior iOS software engineering intern at a startup in Beijing</td><td>Java, Objective-C, Ruby, SQL, Web and Mobile development</td>
-			</tr>
-			<tr class="Us_auto_line">
-				<td>Jing Sun</td><td>Masters</td><td>CS</td><td>Web development</td><td>Bachelor’s in Information and Computing Science; worked as a web developer for one year</td><td>HTML, Javascript, jQuery, Objective-C, Java, SQL</td>
-			</tr>
-			<tr class="Us_auto_line">
-				<td>Mounica</td><td>Masters</td><td>TEAM</td><td>App design, video & poster, needfinding and evaluation techniques, prototype creation</td><td>Bachelor’s in Electronics and Instrumentation Engineering; worked as a systems engineer</td><td>SQL, Python, HTML, Excel, Wireframes, Poster creation</td>
-			</tr>
-		</table>
-	</div>
-    <!--tag Us end-->
+<!--the team-->
+<span class="team_athena">
+	<p class="team_title">The TEAM</p>
+	<center><img src="images/image.png"/></center>
+	<a href="javascript:void(0)" class="team_more" onClick="usClick()">Want to know more about us?</a>
+</span>
+<!--the team-->
 </div>
-<!--Tag end-->
+<!--home-->
 
 
-<!--foot-->
-<div>
-
+<!--proposal-->
+<div class="athena_proposal header"  id="tagContent1">
+	<embed src="AthenaFinalProjectProposal.pdf" toolbar=0 navpanes=0 scrollbar=1 width="100%" height="100%"></embed>	
 </div>
-<!--foot end-->
+<!--proposal-->
+
+
+
+<!--proposal-->
+<div class="athena_proposal header" id="tagContent2">
+	1
+</div>
+<!--proposal-->
+
+
+<!--proposal-->
+<div class="athena_proposal header" id="tagContent3">
+	2
+</div>
+</div>
+
+
+<!--say hi-->
+<div class="say_hi">
+	<p>SAY HI</p>
+	<form name="frmEmail_hidden" action="" method="post" enctype="text/plain">
+		<input type="hidden" name="message" value="">
+	</form>
+	<form name="frmEmail" action="" method="post" class="frm_email">
+		<input type="text" name="name" placeholder="Your Name" id="name_send">
+		<input type="text" name="email" placeholder="Your Email" id="email_send"><br/>
+		<textarea name="message" placeholder="Your Message..." id="message_send"></textarea><br/>
+		<center><input type="button" name="send" value="Send Message"  id="button_send" onlick="toEmail()"></center>
+	</form>
+</div>
+<!--say hi-->
+
+
+
+
+
+
+<br/><br/><br/><br/><br/>
+
+
 
 </body>

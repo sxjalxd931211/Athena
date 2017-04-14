@@ -1,134 +1,285 @@
-<body>
+/*body*/
 *{margin:0px;padding:0px;}
 h1,h2,h3,h4,h5,ul,li{margin:0px;padding:0px;}
 .layout{width:auto;margin:0 auto;}
-body{font-family:microsoft yahei;}
+body{font-family:microsoft yahei; width: 1300px;}
 .left{float:left;}
 .right{float:right}
 .header{overflow:hidden;}
 .inline-block{display:inline-block;}
-</body>
+/*body*/
 
 
 
 
-<head>
-.head{
-	margin:20px auto;
-	font-size: 68px
+/*head*/
+/*label_head*/
+.background_head{
+	height:450px;
+	width:100%;
+	background:url(../images/2.png) center repeat-x;
+	min-width: 500px;
 }
-.link{margin-left:15%;}
-.link ul{
-	list-style-type:none;
-	display:block;
+.label_head{
+	position:relative;
+	margin:20px;
+	height:100px;
+	border-bottom:1px solid #ddd;
+	overflow: hidden;
 }
-.link a{
+#label_head_label{
 	float:left;
+	margin:10px;
+	height:80px;
+	width:80px;
+	display:inline-block;
+}
+#label_head_title{
+	float:left;
+	margin-top:30px;
+	font-size: 30px;
+	color:#fff;
+	display:inline-block;
+}
+.tags_row{
+	display:inline-block;
+	float:left;
+	margin-top:42px;
+	margin-left:20%;
+}
+.tags_row ul{
+	display:inline-block;
+}
+.tags_row li{
+	display:inline-block;
+	padding:14px;
+	font-size: 16px;
+}
+.tags_row a{
 	text-decoration:none;
 	padding:6px;
-	margin:12px 0 0;
-	color:#666;
-}
-.link a:hover{
-	background-color:#999;
 	color:#fff;
-	border-radius:5px 5px 0 0;
 }
-.link li {
-	display:inline-block; 
-	list-style:none;
-	margin:0 36px;
+.tags_row span{
+	text-decoration:none;
+	padding:6px;
+	color:#fff;
+	cursor:Pointer;
+}
+.tags_row a:hover{
+	border-bottom: 1px solid #1dde85;
+}
+.tags_row span:hover{
+	border-bottom: 1px solid #1dde85;
+	cursor:Pointer;
 }
 .tags_row .current a{
-	background-color: #999;
-	color: #fff;
-	border-radius:5px 5px 0 0;
+	border-bottom: 1px solid #1dde85;
 }
-</head>
-
-
-<Title>
-.background{
-	float:left;
-	background-color:#999;
-	height:200px;
-	width:1300px;
-	overflow:hidden;
+.tags_row .current span{
+	border-bottom: 1px solid #1dde85;
 }
-.title_athena{
-	float:left;
-	font-size:120px;
-	color:#fff;
-	text-align:center;
-	margin:-6px 0px;
-	float:left;
-	background-color:#999;
-	height:150px;
-	width:1300px;
-	overflow:hidden;
-	padding-top:10px;
+#jump_to_video{
+	display:inline-block;
+	font-size:16px;
 }
-</Title>
-
-
-
-<Tag>
-.tagContent{
-	display:block;
-	width:500px;
+#jump_to_work{
+	display:inline-block;
+	font-size: 16px;
+}
+/*label_head*/
+/*athena_head*/
+.athena_head{
+	position:relative;
 	margin:20px;
 }
-.object_frame{
-	position:relative;
-	display:block;
-	width:70%;
-	height:500px;
-	margin:18px 16%;
+.athena_head img{
+	float:left;
+	margin-left:15%;
+	height:290px;
 }
-.Home_all{
-	font-size:18px !important;
-	padding:20px !important;
+.athena_head_intro{
+	float:left;
+	width:52%;
+	height:290px;
+	margin:30px 7%;
+	overflow:hidden;
+	color:#fff;
 }
-.iframe_style{
-	border:2px solid #999;
+#athena_head_intro_1{
+	font-size: 30px;
+	font-weight: black;
+	text-align: center;
 }
-.Description_all{
-	WORD-WRAP: break-word;
-	width:70%;
-	position:relative;
-	margin:18px 16%;
-	padding:20px;
-	font-size:18px !important;
+#athena_head_intro_2{
+	font-size:13px;
+	margin-top:20px;
+	text-align: center;
 }
-#Description_title{
-	font-size:40px !important;
-	font-style: bold !important;
-}
-#Video_enjoy{
-    font-size:18px !important;
-    font-style: bold;
-}
-.Time_all{
-	padding-top:20px;
-	font-size:20px!important;
-	line-height: 30px;
-}
-.Us_all{
-	width:70%;
-	position:relative;
-	margin:30px 16%;
-	box-shadow: 10px 10px 5px #ddd;
-}
-.Us_auto_line td{
-	WORD-WRAP: break-word;
-    width: 20px;
-    padding: 10px;
-}
-</Tag>
+/*athena_head*/
+/*head*/
 
-<foot>
-.background_6{background-color:#808080;width:100%;height:122px;margin-top:64px;}
-.foot_word{line-height:24px; text-align:center;margin:35px;}
-.foot_word span{font-size:14px;color:#FFFFFF;}
-.foot_word p{font-size:10px;color:#FFFFFF;padding:2px;}
-</foot>
+
+/*home*/
+#tagContent0{
+	display:block;
+	margin:30px 7%;
+}
+/*vedio*/
+.vedio_frame{
+	display: block;
+	margin:20px 11%;
+}
+.vedio_frame video{
+	margin-top:30px;
+}
+.vedio_frame button{
+	text-align:center;
+	margin:10px auto;
+	background-color:#1dde85;
+	font-size: 15px;
+	color:#fff;
+	padding:5px;
+}
+/*vedio*/
+
+
+/*how it works*/
+.athena_work{
+	display:block;
+	margin:55px 7%;
+	overflow:hidden;
+}
+.athena_work_title{
+	margin-top: 30px;
+	text-align:center;
+	font-size: 25px;
+	color:#f8356d;
+}
+.athena_work_intro{
+	text-align:center;
+	font-size:18px;
+	color:#999;
+	margin-top:30px;
+}
+.athena_work_lay{
+	margin-top:20px;
+}
+.athena_work_lay li{
+	display:inline;
+}
+.athena_work_lay img{
+	width:32%;
+	margin:5px;
+	display:inline;
+}
+/*how it works*/
+
+
+/*team athena*/
+.team_athena{
+	margin:30px 7%;
+	overflow:hidden;
+}
+.team_title{
+	color:#f8356d;
+	text-align:center;
+	font-size: 25px;
+}
+.team_athena img{
+	height:500px;
+	margin-top:30px;
+}
+.team_more{
+	display:block;
+	text-decoration: none;
+	margin:20px 40%;
+	width:240px;
+	font-size: 18px;
+	color:#999;
+	border-bottom:1px solid #999;
+}
+/*team athena*/
+
+/*proposal*/
+#tagContent1{
+	margin:50px 15%;
+	height:1000px;
+	border-bottom:50px solid #333;
+	border-top:50px solid #333;
+}
+/*proposal*/
+
+/*proposal*/
+#tagContent2{
+	
+}
+/*proposal*/
+
+/*proposal*/
+#tagContent3{
+	
+}
+/*proposal*/
+
+
+/*say hi*/
+.say_hi{
+	display:block;
+	margin:0 7%;
+	height:400px;
+	background-color:#999; 
+	overflow:hidden;
+}
+.say_hi p{
+	text-align:center;
+	color:#fff;
+	font-size: 25px;
+	margin-top:30px;
+}
+.frm_email{
+	width:70%;
+	margin:30px 17%;
+}
+#name_send{
+	margin-left:0;
+	width:48%;
+	height:23px;
+	font-size: 15px;
+	padding-left:5px;
+	color:#999;
+	display:inline-block;
+}
+#email_send{
+	margin-left:8px;
+	width:48%;
+	font-size: 15px;
+	padding-left:5px;
+	height:23px;
+	color:#999;
+	display:inline-block;
+}
+#message_send{
+	margin-top:20px;
+	width:100%;
+	font-size: 15px;
+	padding-left:5px;
+	color:#999;
+	height:150px;
+}
+#button_send{
+	text-align:center;
+	margin:15px auto;
+	background-color:#1dde85;
+	font-size: 15px;
+	color:#fff;
+	padding:5px;
+}
+/*say hi*/
+
+
+
+
+/*foot*/
+
+/*foot*/

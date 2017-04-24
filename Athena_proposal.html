@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta  http-equiv="description" content="" />
+<meta http-equiv="keywords" content="" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<title>Athena</title>
+<link rel="stylesheet" href="css/home.css" type="text/css" />
+<link rel="stylesheet" href="css/proposal.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="http://res.quan.tm/Resources/js/jquery/jquery-2.0.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+<script type="text/javascript" src="https://raw.github.com/LarryBattle/Ratio.js/master/src/Ratio.js"></script>  
+<script type="text/javascript" src="https://raw.github.com/LarryBattle/Ratio.js/master/tests/js/Ratio-testcases.js"></script>
+<script type="text/javascript" src="https://rawgit.com/jakerella/jquery-mockjax/master/dist/jquery.mockjax.js"></script>-->
+</head>
+
+<body>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		//click show title
+		$("#tagContent0_p").parent().attr("class","current");
+		$('.tags_row a').click(function(e){
+			e.preventDefault();
+			$(".tags_row li").attr("class","");
+			$(this).parent().attr("class","current");
+			window.location.href=$(this).attr("href");
+			})
+		//click show title
+
+		//athena app
+		$('.athena_app img:first').siblings().hide();
+		setInterval(function(){
+		    $('.athena_app img:visible').fadeOut('slow', function(){
+		    $(this).next('img')[0] === undefined ? $('.athena_app img:first').fadeIn("slow") : $(this).next('img').fadeIn("slow");
+		    });
+		}, 1000*3);
+		//athena app end
+	
+	//click shield
+	$("#propo_shield").click(function(){
+		$("#propo_shield").hide();
+		$(".vertual_class").show();
+		$("#part_1").show();
+	})
+	$("#part_1").click(function(){
+		$("#part_1").hide();
+		$("#part_2").show();
+	})
+	$("#part_2").click(function(){
+		$("#part_2").hide();
+		$("#part_3").show();
+	})
+	$("#part_3").click(function(){
+		$("#part_3").hide();
+		$("#part_4").show();
+		$(".extra_class").show();
+		$("#part_4_extra").show();
+		$("#part_4_extra_img").show();
+	})
+	$("#part_4").click(function(){
+		$("#part_4").hide();
+		$("#part_5").show();
+	})
+	$("#part_5").click(function(){
+		$("#part_5").hide();
+		$("#part_6").show();
+	})
+	$("#part_6").click(function(){
+		$("#part_6").hide();
+		$("#part_7").show();
+	})
+	$("#part_7").click(function(){
+		$("#part_7").hide();
+		$("#part_8").show();
+	})
+	$("#part_8").click(function(){
+		$("#part_8").hide();
+		$("#part_9").show();
+	})
+	$("#part_9").click(function(){
+		$(".vertual_class").hide();
+		$(".display").hide();
+		$("#propo_shield").show();
+	})
+	//click shield end
+
+
+
+	})
+	
+
+
+
+
+
+		//scroll
+		// var lastScrollTop = 0;
+		// $(window).scroll(function(event){
+		// 	var st = $(this).scrollTop();
+		// 	var a = $("#part_1").offset();
+		// 	var a_end_1 = $("#part_1_end_1").offset();
+		// 	var a_end_2 = $("#part_1_end_2").offset();
+		// 	var b = $("#part_2").offset();
+		// 	var b_end_1 = $("#part_2_end_1").offset();
+		// 	var b_end_2 = $("#part_2_end_2").offset();
+		// 	if(st>lastScrollTop){
+		// 		if(a.top-$(window).scrollTop()==0){
+		// 			$("#part_1_img_1").hide();
+		// 			$("#part_1_img_2").removeClass("fixed");
+		// 			$("#part_1_img_2").addClass("img_fixed_left");
+		// 		}
+		// 		if(a_end_2.top>=$(window).scrollTop() && a_end_2.top<($(window).scrollTop()+$(window).height())){
+		// 			$("#part_1_img_2").removeClass("img_fixed_left");
+		// 			$("#part_1_img_2").addClass("fixed");
+		// 			$("#part_1_img_1").show();
+		// 		}
+		// 		if(b.top-$(window).scrollTop()==0){
+		// 			$("#part_2_img_1").hide();
+		// 			$("#part_2_img_2").removeClass("fixed");
+		// 			$("#part_2_img_2").addClass("img_fixed_right");
+		// 		}
+		// 		if(b_end_2.top>=$(window).scrollTop() && b_end_2.top<($(window).scrollTop()+$(window).height())){
+		// 			$("#part_2_img_2").removeClass("img_fixed_right");
+		// 			$("#part_2_img_2").addClass("fixed");
+		// 			$("#part_2_img_1").show();
+		// 		}
+		// 	}
+		// 	else{
+		// 		if(a_end_1.top-$(window).scrollTop()==0){
+		// 			$("#part_1_img_2").removeClass("fixed");
+		// 			$("#part_1_img_2").addClass("img_fixed_left");
+		// 		}
+		// 		if(b_end_1.top-$(window).scrollTop()==0){
+		// 			$("#part_2_img_2").removeClass("fixed");
+		// 			$("#part_2_img_2").addClass("img_fixed_right");
+		// 		}
+		// 	}
+		// 	lastScrollTop = st;
+		// });
+		//scroll end
+
+
+	
+	
+
+
+
+</script>
+
+<!--head-->
+<div class="background_head">
+	<div class="label_head">
+		<a href="Athena_home.html" class="label_head_link"><img src="images/1.png" id="label_head_label"/></a>
+		<a href="Athena_home.html" class="label_head_link"><img src="images/Athena.png" id="label_head_title"/></a>
+		<div class="tags_row" valign="right">
+		    
+			<ul>
+		      <li><a href="Athena.html">HOME</a></li>
+		      <li><a href="Athena_home.html#work_jump">HOW IT WORKS</a></li> 
+		      <li><a href="Athena_proposal.html#propo_shield" id="tagContent0_p">PROPOSAL</a></li>
+		      <li><a href="Athena_timeline.html#athena_timeline">TIMELINE</a></li>
+		      <li><a href="Athena_aboutus.html#aboutus_back">ABOUT US</a></li> 
+		    </ul>
+	    </div>
+	</div>
+	<div class="athena_head">
+		<div class="athena_app">
+			<img src="images/app_1.png"/>
+			<img src="images/app_2.png"/>
+			<img src="images/app_3.png"/>
+			<img src="images/app_4.png"/>
+			<img src="images/app_5.png"/>
+			<img src="images/app_6.png"/>
+			<img src="images/app_7.png"/>
+			<img src="images/app_8.png"/>
+		</div>
+		<div class="athena_head_intro">
+			<p id="athena_head_intro_1">Need to improve your English pronunciation?      <span style="color:#f8356d;">ATHENA </span>is the answer</p>
+			<p id="athena_head_intro_2">The tool you were looking for to practice your speech, learn how to pronunce that entangled word, help you distringuish between similar sounding words, help your speaking being understood and more!</p>
+		</div>
+	</div>
+</div>
+<!--head-->
+
+<!--Proposal-->
+<div id="propo_shield">
+	<center><p id="propo_1">Proposal</p></center>
+	<center><p id="propo_2">PRESS TO ENTER</p></center>
+</div>
+<!--Proposal-->
+
+
+<div class="vertual_class">
+<!--Part 1-->
+<div class="part_public display" id="part_1">
+	<img src="images/idea2.png" class="img_public img_left" id="part_1_img"/>
+	<div class="article_public article_right">
+		<p>The problem</p><br/>
+		<p>
+			There are 1.2 million international students in the US, all of whom, on average, got the lowest scores in their Speaking section of the Test Of English as a Foreign Language (TOEFL). Our hypothesis is that not being understood makes it hard for students to reach the audience while presenting, discourage them from class participation and acts as an obstacle for social integration. Athena will help them overcome these obstacles by providing a quick way to let them say what they want to say with the correct English pronunciation. 
+		</p><br/>
+		<p>
+			Not only are we motivated by some of the group members own experience to struggle with English pronunciation while being in the US, even though we have studied English for +7 years; Students we know from our own classes who have a hard time when they have to talk or present (such as our first HCI class where all of the students had to introduce themselves); Having witnessed presentations where we could not understand what the person presenting was saying and therefore, we lost interest. Our belief is that this application can have a greater purpose. Research shows us there is a potential use to help people looking for a job, indicating how important it is to speak English correctly. Additionally, research shows that immigrants get substandard health care because they do not speak English well and only a few hospitals have translators. Therefore, while our currently target user is US international students we envision our technology could be, without having to add many more features, targeted to help immigrant users to get a job and improve health service they receive.
+		</p>
+	</div>
+</div>
+<!--Part 1-->
+
+<!--Part 2-->
+<div class="part_public display" id="part_2">
+	<img src="images/iphone2.png" class="img_public img_right" id="part_2_img"/>
+	<div class="article_public article_left">
+		<p>Sources</p><br/>
+		<p>https://www.ets.org/s/toefl/pdf/94227_unlweb.pdf</p><br/>
+		<p>http://www.cbsnews.com/news/language-barriers-cause-problems/</p>
+	</div>
+</div>
+<!--Part 2-->
+
+
+<!--Part 3-->
+<div class="part_public display" id="part_3">
+	<img src="images/idea2.png" class="img_public img_left" id="part_3_img"/>
+	<div class="article_public article_right">
+		<p>The solution</p><br/>
+		<p>
+			Today, there is plenty of mobile applications and software intended to train the users in English pronunciation. These applications are structured in an English course manner, where the user goes through different levels of knowledge and evolves through time. They offer an academic approach where each sound is to be practised based on fixed words that are provided. There are tools that outperform others, and those are normally paid. While the pronunciation feedback is present for free text that the user input, that is normally one of the complementary features of the app. However, Athena approach is different since it focuses on other profile of users:  those who are looking for a fast, straightforward feedback on their speech pronunciation. 
+		</p><br/>
+		<p>
+			We will provide that fast, straightforward feedback on user’s speech pronunciation. We envision an application that will obtain the text the user wants to pronounce, will provide the correct pronunciation, user will record and a feedback will be provided. We will get details on feedback as we perform interviews, but we imagine that the text will be presented to the user with colors indicating whether the word was pronounced correctly: from green if pronunciation is accurate to red if the word was mispronounced. For those mispronounced, the user will be able to click on them to listen the right pronunciation and practice to record again and get feedback (check our video!); so on till the user is satisfied or the word is pronounced correctly. Additionally, a percentage score will be displayed. For more details on this score, please check out the implementation section.
+		</p><br/>
+		<p>
+			How the application will obtain the text is another objective of the needfinding we will perform. We believe typing and recording might be the most useful methods, but we want to get that information from users. We also believe other features such as synonym finding based on input speech might be another nice feature to have. It would help people who lack vocabulary.
+		</p>
+	</div>
+</div>
+<!--Part 3-->
+
+<!--Part 4-->
+<div id="part_4" class="display">
+	<p>Needfinding</p><br/>
+	<p>
+		We will be using two needfinding techniques in order to better understand our customers and target market. Specifically, they are online surveys, and personal interviews​. We chose online surveys so that we could get answers to general questions related to our problem and product, for a mass audience. It would allow us to better gauge who exactly our target customer is through a large pool of data.
+	</p><br/>
+	<p>
+		We will be posting the survey through multiple online mediums. Four of the five group members are international students, and this gives us a large network of possible customers. We will be posting on each of our individual facebook accounts to attract users of multiple nationalities. Along with this, we will be posting the survey on whatsapp groups in which we feel potential customers could exist. A few that come to mind right now are friends groups from our home countries, along with professional groups where English was not the main medium of communication.
+	</p><br/>
+	<p>
+		We chose to go with personal interviews for a few reasons. One is because we can ask more open ended questions in order to draw pertinent information, and can always ask a follow up question which could not be done in an online survey. Another advantage of the personal interview is that we can be more selective of the participants. This way, we can choose the participants which we feel would benefit most from our product, and through an iterative process, become more accurate in the said selection of participants.  We will select candidates who we feel are our target market; specifically international students with low exposure to the english language prior to coming to the United States.  We will conduct the interview using the following protocol: Introduction, Kickoff process, Build rapport, Main experiment, Reflection, Wrap up. 
+	</p><br/>
+	<p>
+		Online Survey Questions will include educational level, mother language, how would they rate their pronunciation skills, whether they have a hard time understanding others when they speak English, whether they use electronic dictionaries to check words, how often they have to present,  feedback they get on presentations, if they use any tool for pronunciation. Interview Questions will include whether they have trouble pronouncing words in the English language, if there are situations in which they  faced difficulties with pronunciation, if they did anything to overcome such difficulties, if they feel people have a hard time understanding what they have to say, what method they usually use while preparing for a presentation to help their pronunciation, what dictionary do they usually refer to check your pronunciation, if they think speaking words right helps you with communicating with people, etc.
+	</p>
+</div>
+<!--Part 4-->
+
+
+<!--Part 5-->
+<div class="part_public display" id="part_5">
+	<div class="article_public article_right">
+		<p>Prototyping</p><br/>
+		<p>
+			For prototyping, we will be implementing three prototyping techniques. Specifically, they are storyboarding, paper prototyping, and wireframes​. We will be using storyboarding in order to show what type of situations would merit using our app/website. The results of the needfinding will allow to show the personas and situations under which these personas would use the app.
+		</p><br/>
+		<p>
+			We will go with paper prototyping in order to get a better understanding of all the functionalities the app would incorporate without the huge loss in time that would exist in an actual prototype.
+		</p><br/>
+		<p>
+			Finally, we will create a wireframe to better visualize the look and feel of the app. In order to test the validity of the paper prototype and the wireframe, we will use the Wizard of Oz method, where the “wizard” would be an impartial candidate.
+		</p><br/>
+		<p>
+			We would run each prototype through several iterations, where there would be an increment in breadth and fidelity with each iteration.
+		</p>
+	</div>
+	<img src="images/evaluation2.png" class="img_public img_left" id="part_5_img"/>
+</div>
+<!--Part 5-->
+
+
+
+<!--Part 6-->
+<div id="part_6" class="display">
+	<p>Implementation</p><br/>
+	<p>
+		Athena is going to have features that will allow users to improve their English pronunciation. With Athena, the user will have an user account that will keep track of their pronunciation progress. The user will be able to record themselves speaking a word in English, and then type in that word to the app. The app will then play back the proper pronunciation of the word and provide a score of how close their pronunciation was to the proper pronunciations.
+	</p><br/>
+	<p>
+		Athena is going to be built as a mobile app. We believe that Athena will be most useful to users as a mobile app that they can carry around and use on-the-go as needed. While we believe that a mobile app is the best choice for our users, this choice comes with the certain drawbacks. Because the processing power on mobile applications is limited at best, our implementation will make use of a server to handle the pronunciation comparison algorithm. This means there will be a lot of data transferred back and forth between the server and the mobile app, and bad network connection could affect the speed and usability of the app.
+	</p><br/>
+	<p>
+		Athena is going to be written as an iOS app using Swift and Xcode, largely because some team members have experience in the iOS coding environment. This frontend will handle the user interaction of both creating and managing their accounts, and recording and inputting the text of their words, and the displaying of the proper pronunciation and the score of the user pronunciation. The backend is going to be a server hosted by Amazon Web Services (AWS). Amazon’s API Gateway will be used to communicate information between the iOS app and the server, AWS Lambda will handle the API requests from the iOS app and to the text-to-speech API, and run the pronunciation comparison algorithm, as well as store user account information in the AWS Relational Database Service (RDS).
+	</p><br/>
+	<p>
+		AWS was chosen because it offers all of our required services on a free tier level. AWS Lambda will be run using the Python SDK on the backend, as Python has many open source libraries such as LibROSA and Dejavu for audio processing and analysis. Additionally, a third-party text-to-speech API, Voice RSS, will be used to get the correct pronunciation of the user’s target words.
+	</p><br/>
+	<p>
+		Athena faces many technical challenges. The largest challenge is creating a meaningful comparison between the correct pronunciation of the words and the user’s pronunciation of the words. To solve this problem, compare the frequencies of the user pronunciation and the proper pronunciation. First, we will do a Fourier Transform using the FFT algorithm, and then we will compare the frequency distribution. This will allow us to compare the two audio files without the volume and the frequencies themselves affecting the comparison. We additionally plan to use the Mel-Frequency Cepstrum Coefficient Algorithm (MFCC). Mel-Frequency Cepstrum Coefficient Algorithm is a popular algorithm designed for voice recognition. In general, it use a nonlinear scale(Mel Scale), which can better simulate our hearing system, to represent the voice signal. To get the Mel-Frequency, following steps are required: Split the audio signal into a series of frame, Pre-emphasis the signal and then filter out all noises via a HPF(High Pass Filter), Transfer the signal from time-domain into frequency-domain using Fourier Transform, Transfer the scale from frequency to Mel-scale using Mel Filter,  Take the logarithm of all filterbank energies,  Apply IDFT(Inverse Discrete Fourier Transform) towards each frame, then we got the cepstrum of this signal.  The amplitudes we got is the MFCC and the first 13 coefficients are necessary for voice matching.
+	</p><br/>
+	<p>
+		Given these two audio comparison algorithms, we plan to deploy two scoring schema respectively.
+	</p><br/>
+	<p>
+		For frequency distribution algorithm, we plan to use KS Test (Kolmogorov-Smirnov Test). In KS Test, the maximum distance between two samples will be returned as the difference between these two samples. We can use this difference as our final score. The shorter this distance is, the better score you will get. For MFCC algorithm. We can simply compare whether the MFCC coefficient array in user’s audio is the same that in standard audio. But, we need to do further experiment to figure out the weights of these 13 coefficient.   Another challenge is getting a library of the correct pronunciations of words. To accomplish this, we decided to use to text-to-speech API that takes in text, and then sends back an audio file of a computerized pronunciation of the text. Specifically, we plan to the use previously mentioned Voice RSS API, which allows 350 free requests a month. A potential issue with this solution is if the computer pronunciation does not sound accurate enough to real life, and the comparisons with the user voice is inaccurate. If we find the comparisons to be inaccurate, we plan to adjust the algorithm to account for these differences. We looked into using a pronunciation database, but there are not any that are free, and the cheapest one does not distinguish between American and British English, so we decided that we will need to stick with the Voice RSS API.
+	</p><br/>
+	<p>
+		Other small challenges include recording the user’s audio in the iOS app and sending that audio to AWS for processing. To record user audio, we plan to use the AVAudioRecorder iOS API. To send the audio file to the server, we will use the Kolmogorov-Smirnov Goodness-of-Fit Test NSMutableData API, which wraps files to allow them to be sent via byte buffer to the server.
+	</p>
+</div>
+<!--Part 6-->
+
+
+<!--Part 7-->
+<div class="part_public display" id="part_7">
+	<div class="article_public article_right">
+		<p>User Study/Evaluation</p><br/>
+		<p>
+			Our hypothesis while conducting evaluation studies is that the users who use the Athena app will benefit the most in their pronunciation skills, compared to users who do not use any tools as well as users who using competitive apps in the market. The experiment will be conducted as follows: Each participant would be given a paragraph to read. The participant would first say the paragraph without prior practice, then take 10-15 minutes of time in order to learn the paragraph better using various mediums outlined further. After the time is up, the participant will again read the paragraph. An impartial judge would determine the improvement in pronunciation of the participant. The metrics we will be using in order to determine the result of the experiment are understandability of participant, ease of use of app, and user ratings.
+		</p>
+	</div>
+	<img src="images/evaluation2.png" class="img_public img_left" id="part_7_img"/>
+</div>
+<!--Part 7-->
+
+<!--Part 8-->
+<div class="part_public display" id="part_8">
+	<div class="article_public article_left">
+		<p>Experiment Guidelines</p><br/>
+		<p>
+			There will be 15 participants who are divided into 3 different groups.We will choose individuals who range from average speaking to poor skills in English. These individuals will be from various ethnic and cultural backgrounds in equal proportions in all the 3 groups so that error is minimized.
+		</p>
+		<p>
+			One of the three groups is the control group where the participants do not use any tools or techniques to help improve their pronunciation skills. The second group will use Google in order to better their pronunciation. The third group will be using Athena in order to help improve their pronunciation. After the experiment is run, we will test to see which group saw the most improvement in their performance. This is a between subjects study.
+		</p>
+		<p>
+			The factors which will remain constant are time spent on one project, the presentation itself, and day the experiment is conducted for participants.
+		</p>
+	</div>
+	<img src="images/evaluation2.png" class="img_public img_right" id="part_8_img"/>
+</div>
+<!--Part 8-->
+
+
+
+<!--Part 9-->
+<div class="part_public display" id="part_9">
+	<div class="article_public article_right">
+		<p>Fallback Plan</p><br/>
+		<p>
+			 If the program does not work out fine, we can do some evaluation survey to all those participants talking about their feeling after perform the three programs separately.  If the results for all participants set equal weight to our App and to the comparative App, we will just enlarge the population to do the survey again.  One feature which we propose is that a user’s presentation should be able to be connected to the app so that pronunciation of words in the presentation can be taught to the user. Though it would be a good addition to the app, we feel that it is difficult to implement and hence can be justified as a risky feature. If, at the end, this feature does not work as intended, we are comfortable with removing this functionality. The reason behind doing so, is because this is not the main functionality of the app, it is simply an add on.
+		</p>
+	</div>
+	<img src="images/evaluation2.png" class="img_public img_left" id="part_9_img"/>
+</div>
+<!--Part 9-->
+
+</div>
+
+<!--part 3 extra-->
+<!-- <div class="vertual_class display" id="part_3_extra">
+	<img src="images/evaluation2.png" class="img_public img_left display" id="part_3_extra_img"/>
+</div> -->
+<!--part 3 extra end-->
+
+<div class="extra_class">
+<!--part 4 extra-->
+<div class="vertual_class display" id="part_4_extra">
+	<img src="images/evaluation2.png" class="img_public img_right display" id="part_4_extra_img"/>
+</div>
+<!--part 4 extra end-->
+
+<!--part 6 extra-->
+<div class="vertual_class display" id="part_6_extra">
+	<img src="images/evaluation2.png" class="img_public img_right display" id="part_4_extra_img"/>
+</div>
+<!--part 6 extra end-->
+</div>
+
+
+
+<!-- <img src="images/test.png" class="fixed" id="part_1_img_2"/>
+<img src="images/test.png" class="fixed" id="part_2_img_2"/> -->
+
+
+
+
+
+
+<!--foot-->
+<div class="home_foot">
+	<div class="foot_group">
+		<div>
+			<p class="foot_title">About Us</p>
+			<p class="foot_detail">We are a group of 5 undergraduate and graduate students from University of Rochester. This is the result of our project for Human Computer Interaction and we hope you enjoy our product as much as we enjoy creating it!</p>
+		</div>
+		<div>
+			<p class="foot_title">Quick Links</p>
+			<a href="" class="foot_web">Human Computer Interaction</a>
+			<a href="" class="foot_web">University of Rochester</a>
+		</div>
+		<div>
+			<p class="foot_title">Find Us On</p>
+			<a href=""><img src="images/facebook_sign.png"/></a>
+			<a href=""><img src="images/twitter_sign.png"/></a>
+		</div>
+	</div>
+	<p class="foot_designer">A design By Florencia Spinella & Jing Sun & MD.Zilur Rahman Sama</p>
+</div>
+<!--foot end-->
+
+<!--end-->
+<div class="end_background">	
+</div>
+<!--end-->
+
+
+
+</body>

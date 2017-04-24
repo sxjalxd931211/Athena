@@ -6,7 +6,7 @@
 <meta http-equiv="keywords" content="" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 <title>Athena</title>
-<link rel="stylesheet" href="css/css.css" type="text/css" />
+<link rel="stylesheet" href="css/home.css" type="text/css" />
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link rel="stylesheet" href="css/reset.css" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -22,33 +22,43 @@
 <body>
 
 <script type="text/javascript">
-// $(document).ready(function(){
-// 	$("#tagContent0_m").parent().attr("class","current");
-// 	$('.tags_row a').click(function(e){
-// 		e.preventDefault();
-// 		$(".tags_row li").attr("class","");
-// 		$(this).parent().attr("class","current");
-// 		})
-// })
 
-$(document).ready(function(){
-	// $(window).resize(function(){
-	// if(document.body.clientWidth<1000){
-	// alert("No Resize!");
-	// window.resizeTo(document.body.clientWidth,1000);
-	// }
-	// });
-    $(".tagContent div").hide();
-	$(".tags_row li:first").attr("class","current");
-	$(".tagContent div:first").fadeIn();
-	$('.tags_row a').click(function(e){
-		e.preventDefault();
-		$(".tagContent div").hide();
-		$(".tags_row li").attr("class","");
-		$(this).parent().attr("class","current");
-		$('#'+$(this).attr('title')).fadeIn();
-		//$('#'+$(this).attr('title>div')).fadeIn();
-		})
+
+$(function(){
+	//click show title
+	$(document).ready(function(){
+		$("#tagContent0_m").parent().attr("class","current");
+		$('.tags_row a').click(function(e){
+			e.preventDefault();
+			$(".tags_row li").attr("class","");
+			$(this).parent().attr("class","current");
+			window.location.href=$(this).attr("href");
+			})
+	})
+	//click show title
+	
+	//click show title
+ 	//    $(".tagContent div").hide();
+	// $(".tags_row li:first").attr("class","current");
+	// $(".tagContent div:first").fadeIn();
+	// $('.tags_row a').click(function(e){
+	// 	e.preventDefault();
+	// 	$(".tagContent div").hide();
+	// 	$(".tags_row li").attr("class","");
+	// 	$(this).parent().attr("class","current");
+	// 	$('#'+$(this).attr('title')).fadeIn();
+	// 	//$('#'+$(this).attr('title>div')).fadeIn();
+	// 	})
+	//click show title end
+
+	//athena app
+	$('.athena_app img:first').siblings().hide();
+	setInterval(function(){
+	    $('.athena_app img:visible').fadeOut('slow', function(){
+	    $(this).next('img')[0] === undefined ? $('.athena_app img:first').fadeIn("slow") : $(this).next('img').fadeIn("slow");
+	    });
+	}, 1000*3);
+	//athena app end
 })
 function toEmail(){
 	var objFrm = document.frmEmail;
@@ -61,47 +71,41 @@ function toEmail(){
 	objFrmEmail.submit();
 }
 
-function vedioClick(){
-	document.getElementById("tagContent0").style.display = "block";
-	document.getElementById("tagContent1").style.display = "none";
-	document.getElementById("tagContent2").style.display = "none";
-	document.getElementById("tagContent3").style.display = "none";
-	window.location.hash = "#vedio_jump";
-}
-function workClick(){
-	document.getElementById("tagContent0").style.display = "block";
-	document.getElementById("tagContent1").style.display = "none";
-	document.getElementById("tagContent2").style.display = "none";
-	document.getElementById("tagContent3").style.display = "none";
-	window.location.hash = "#work_jump";
-}
-function usClick(){
-	document.getElementById("tagContent3").style.display = "block";
-	document.getElementById("tagContent0").style.display = "none";
-	document.getElementById("tagContent1").style.display = "none";
-	document.getElementById("tagContent2").style.display = "none";
-}
+// function workClick(){
+// 	window.location.href="Athena_home.html#work_jump";
+// 	//scrollTo(0,800);
+// 	//window.location.hash = "#work_jump";
+// }
 
 </script>
 
 <!--head-->
 <div class="background_head">
 	<div class="label_head">
-		<img src="images/1.png" id="label_head_label"/>
-		<span id="label_head_title">Athena</span>
+		<a href="Athena_home.html" class="label_head_link"><img src="images/1.png" id="label_head_label"/></a>
+		<a href="Athena_home.html" class="label_head_link"><img src="images/Athena.png" id="label_head_title"/></a>
 		<div class="tags_row" valign="right">
-			<span id="jump_to_video" onclick="vedioClick()">CONCEPT VEDIO</span>
-		    <span id="jump_to_work" onclick="workClick()">HOW IT WORKS</span>
+		    
 			<ul>
-		      <li><a href="javascript:void(0)" title="tagContent0">HOME</a></li> 
-		      <li><a href="javascript:void(0)" title="tagContent1">PROPOSAL</a></li>
-		      <li><a href="javascript:void(0)" title="tagContent2">TIMELINE</a></li>
-		      <li><a href="javascript:void(0)" title="tagContent3">ABOUT US</a></li> 
+		      <li><a href="Athena.html" id="tagContent0_m">HOME</a></li>
+		      <li><a href="Athena_home.html#work_jump">HOW IT WORKS</a></li> 
+		      <li><a href="Athena_proposal.html#propo_shield">PROPOSAL</a></li>
+		      <li><a href="Athena_timeline.html#athena_timeline">TIMELINE</a></li>
+		      <li><a href="Athena_aboutus.html#aboutus_back">ABOUT US</a></li> 
 		    </ul>
 	    </div>
 	</div>
 	<div class="athena_head">
-		<img src="images/3.png"/>
+		<div class="athena_app">
+			<img src="images/app_1.png"/>
+			<img src="images/app_2.png"/>
+			<img src="images/app_3.png"/>
+			<img src="images/app_4.png"/>
+			<img src="images/app_5.png"/>
+			<img src="images/app_6.png"/>
+			<img src="images/app_7.png"/>
+			<img src="images/app_8.png"/>
+		</div>
 		<div class="athena_head_intro">
 			<p id="athena_head_intro_1">Need to improve your English pronunciation?      <span style="color:#f8356d;">ATHENA </span>is the answer</p>
 			<p id="athena_head_intro_2">The tool you were looking for to practice your speech, learn how to pronunce that entangled word, help you distringuish between similar sounding words, help your speaking being understood and more!</p>
@@ -111,22 +115,16 @@ function usClick(){
 <!--head-->
 
 
-
-<div class="tagContent header">
 <!--home-->
-<div id="tagContent0">
-<!--vedio-->
-<span class="vedio_frame header" id="vedio_jump">
-	<video src="images/Athena_Concept_Video.mp4" controls="controls"></video>
-	<center><button>See More</button></center>
-</span>
-<!--vedio-->
 
 <!--how it works-->
-<span class="athena_work" id="work_jump">
-	<p class="athena_work_title">What is ATHENA and how does it work</p>
+<div class="athena_work">
+<p class="athena_work_title">What is ATHENA and how does it work</p>
+<div class="vedio_frame header" id="work_jump">
+	<video src="images/Video_Athena.mp4" controls="controls"></video>
+	<center><button>See More</button></center>
 	<p class="athena_work_intro">Athena is a mobile app created by University of Rochester students to help you improve your English pronunciation. We saw the need of this tool for many of our international students and we would love to help them!</p>
-	<span class="athena_work_lay">
+	<div class="athena_work_lay">
 		<ul>
 			<li><img src="images/group_1.png"/></li>
 			<li><img src="images/group_2.png"/></li>
@@ -135,41 +133,42 @@ function usClick(){
 			<li><img src="images/group_5.png"/></li>
 			<li><img src="images/group_6.png"/></li>
 		</ul>
-	</span>
-</span>
+	</div>
+</div>
+</div>
 <!--how it works-->
 
 <!--the team-->
-<span class="team_athena">
+<div class="team_athena">
 	<p class="team_title">The TEAM</p>
 	<center><img src="images/image.png"/></center>
-	<a href="javascript:void(0)" class="team_more" onClick="usClick()">Want to know more about us?</a>
-</span>
-<!--the team-->
+	<a href="About_us.html" class="team_more">Want to know more about us?</a>
 </div>
+<!--the team-->
+
 <!--home-->
 
 
 <!--proposal-->
-<div class="athena_proposal header"  id="tagContent1">
+<!-- <div class="athena_proposal header"  id="tagContent1">
 	<embed src="AthenaFinalProjectProposal.pdf" toolbar=0 navpanes=0 scrollbar=1 width="100%" height="100%"></embed>	
-</div>
+</div> -->
 <!--proposal-->
 
 
 
-<!--proposal-->
-<div class="athena_proposal header" id="tagContent2">
-	1
-</div>
-<!--proposal-->
+<!--timeline-->
+<!-- <div class="athena_timeline header" id="tagContent2">
+	<img src="images/timeline.jpg"/>
+</div> -->
+<!--timeline-->
 
 
 <!--proposal-->
-<div class="athena_proposal header" id="tagContent3">
+<!-- <div class="athena_proposal header" id="tagContent3">
 	2
-</div>
-</div>
+</div> -->
+
 
 
 <!--say hi-->
@@ -189,10 +188,38 @@ function usClick(){
 
 
 
+<!--foot-->
+<div class="home_foot">
+	<div class="foot_group">
+		<div>
+			<p class="foot_title">About Us</p>
+			<p class="foot_detail">We are a group of 5 undergraduate and graduate students from University of Rochester. This is the result of our project for Human Computer Interaction and we hope you enjoy our product as much as we enjoy creating it!</p>
+		</div>
+		<div>
+			<p class="foot_title">Quick Links</p>
+			<a href="" class="foot_web">Human Computer Interaction</a>
+			<a href="" class="foot_web">University of Rochester</a>
+		</div>
+		<div>
+			<p class="foot_title">Find Us On</p>
+			<a href=""><img src="images/facebook_sign.png"/></a>
+			<a href=""><img src="images/twitter_sign.png"/></a>
+		</div>
+	</div>
+	<p class="foot_designer">A design By Florencia Spinella & Jing Sun & MD.Zilur Rahman Sama</p>
+</div>
+<!--foot end-->
+
+<!--end-->
+<div class="end_background">	
+</div>
+<!--end-->
 
 
 
-<br/><br/><br/><br/><br/>
+
+
+
 
 
 

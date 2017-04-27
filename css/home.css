@@ -2,11 +2,24 @@
 *{margin:0px;padding:0px;}
 h1,h2,h3,h4,h5,ul,li{margin:0px;padding:0px;}
 .layout{width:auto;margin:0 auto;}
-body{font-family:Myriad Pro Regular; width: 1300px;}
 .left{float:left;}
 .right{float:right}
 .header{overflow:hidden;}
+body{
+	font-family: MyriadProRegular, Arial, sans-serif;
+	font-weight: 100;
+	font-weight:100;
+}
 .inline-block{display:inline-block;}
+@font-face {
+font-family: "MyriadProRegular";
+src: url("../font/MyriadPro-Regular.eot");
+src: local("MyriadPro Regular"),
+local("MyriadPro"),
+url("../font/MyriadPro-Regular.woff") format("woff"),
+url("../font/MyriadPro-Regular.ttf") format("truetype"),
+url("../font/myriadpro-regular.svg#MyriadPro") format("svg");
+}
 /*body*/
 
 

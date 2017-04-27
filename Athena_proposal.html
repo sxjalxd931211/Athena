@@ -45,51 +45,188 @@
 		//athena app end
 	
 	//click shield
-	$("#propo_shield").click(function(){
+	var newImage_pre = new Image(); var newImage_ne = new Image();
+	var oldImage_pre = $(".arrow_pre").attr("src"); var oldImage_ne = $(".arrow_ne").attr("src");
+	newImage_pre.src = "images/arrow_on_pre.png"; newImage_ne.src = "images/arrow_on_ne.png";
+	$(".arrow_pre").hover(
+		function(){
+			$(".arrow_pre").attr("src",newImage_pre.src);
+		},
+		function(){
+			$(".arrow_pre").attr("src",oldImage_pre)
+		}
+	);
+	$(".arrow_ne").hover(
+		function(){
+			$(".arrow_ne").attr("src",newImage_ne.src);
+		},
+		function(){
+			$(".arrow_ne").attr("src",oldImage_ne);
+		}
+	);
+	$("#propo_window").click(function(){
 		$("#propo_shield").hide();
+		$(".background_head").hide();
+		$(".home_foot").hide();
+		$(".end_background").hide();
 		$(".vertual_class").show();
-		$("#part_1").show();
+		$("#exit").show();
+		$("#part_1").removeClass("display");
+		$(".arrow").show();
+		$(".arrow_1").show();
 	})
-	$("#part_1").click(function(){
-		$("#part_1").hide();
-		$("#part_2").show();
+	$("#part_1_arrow_pre").click(function(){
+		$("#part_1").addClass("display");
+		$(".arrow_1").hide();
+		$("#part_9").removeClass("display");
+		$(".arrow_9").show();
 	})
-	$("#part_2").click(function(){
-		$("#part_2").hide();
-		$("#part_3").show();
+	$("#part_1_arrow_ne").click(function(){
+		$("#part_1").addClass("display");
+		$(".arrow_1").hide();
+		$("#part_2").removeClass("display");
+		$(".arrow_2").show();
 	})
-	$("#part_3").click(function(){
-		$("#part_3").hide();
-		$("#part_4").show();
+	$("#part_2_arrow_pre").click(function(){
+		$("#part_2").addClass("display");
+		$(".arrow_2").hide();
+		$("#part_1").removeClass("display");
+		$(".arrow_1").show();
+	})
+	$("#part_2_arrow_ne").click(function(){
+		$("#part_2").addClass("display");
+		$(".arrow_2").hide();
+		$("#part_3").removeClass("display");
+		$(".arrow_3").show();
+	})
+	$("#part_3_arrow_pre").click(function(){
+		$("#part_3").addClass("display");
+		$(".arrow_3").hide();
+		$("#part_2").removeClass("display");
+		$(".arrow_2").show();
+	})
+	$("#part_3_arrow_ne").click(function(){
+		$("#part_3").addClass("display");
+		$(".arrow_3").hide();
+		$("#part_4").removeClass("display");
 		$(".extra_class").show();
-		$("#part_4_extra").show();
-		$("#part_4_extra_img").show();
+		$("#part_4_extra").removeClass("display");
+		$("#part_4_extra_img").removeClass("display");
+		$(".arrow_4").show();
 	})
-	$("#part_4").click(function(){
-		$("#part_4").hide();
-		$("#part_5").show();
+	$("#part_4_arrow_pre").click(function(){
+		$("#part_4").addClass("display");
+		$(".arrow_4").hide();
+		$("#part_4_extra").addClass("display");
+		$("#part_4_extra_img").addClass("display");
+		$(".extra_class").hide();
+		$("#part_3").removeClass("display");
+		$(".arrow_3").show();
 	})
-	$("#part_5").click(function(){
-		$("#part_5").hide();
-		$("#part_6").show();
+	$("#part_4_arrow_ne").click(function(){
+		$("#part_4").addClass("display");
+		$(".arrow_4").hide();
+		$("#part_4_extra").addClass("display");
+		$("#part_4_extra_img").addClass("display");
+		$(".extra_class").hide();
+		$("#part_5").removeClass("display");
+		$(".arrow_5").show();
 	})
-	$("#part_6").click(function(){
-		$("#part_6").hide();
-		$("#part_7").show();
+	$("#part_5_arrow_pre").click(function(){
+		$("#part_5").addClass("display");
+		$(".arrow_5").hide();
+		$("#part_4").removeClass("display");
+		$(".extra_class").show();
+		$("#part_4_extra").removeClass("display");
+		$("#part_4_extra_img").removeClass("display");
+		$(".arrow_4").show();
 	})
-	$("#part_7").click(function(){
-		$("#part_7").hide();
-		$("#part_8").show();
+	$("#part_5_arrow_ne").click(function(){
+		$("#part_5").addClass("display");
+		$(".arrow_5").hide();
+		$("#part_6").removeClass("display");
+		$(".extra_class").show();
+		$("#part_6_extra").removeClass("display");
+		$("#part_6_extra_img").removeClass("display");
+		$(".arrow_6").show();
 	})
-	$("#part_8").click(function(){
-		$("#part_8").hide();
-		$("#part_9").show();
+	$("#part_6_arrow_pre").click(function(){
+		$("#part_6").addClass("display");
+		$(".arrow_6").hide();
+		$("#part_6_extra").addClass("display");
+		$("#part_6_extra_img").addClass("display");
+		$(".extra_class").hide();
+		$("#part_5").removeClass("display");
+		$(".arrow_5").show();
 	})
-	$("#part_9").click(function(){
-		$(".vertual_class").hide();
-		$(".display").hide();
-		$("#propo_shield").show();
+	$("#part_6_arrow_ne").click(function(){
+		$("#part_6").addClass("display");
+		$(".arrow_6").hide();
+		$("#part_6_extra").addClass("display");
+		$("#part_6_extra_img").addClass("display");
+		$(".extra_class").hide();
+		$("#part_7").removeClass("display");
+		$(".arrow_7").show();
 	})
+	$("#part_7_arrow_pre").click(function(){
+		$("#part_7").addClass("display");
+		$(".arrow_7").hide();
+		$("#part_6").removeClass("display");
+		$(".arrow_6").show();
+		$("#part_6_extra").removeClass("display");
+		$("#part_6_extra_img").removeClass("display");
+		$(".extra_class").show();
+	})
+	$("#part_7_arrow_ne").click(function(){
+		$("#part_7").addClass("display");
+		$(".arrow_7").hide();
+		$("#part_8").removeClass("display");
+		$(".arrow_8").show();
+	})
+	$("#part_8_arrow_pre").click(function(){
+		$("#part_8").addClass("display");
+		$(".arrow_8").hide();
+		$("#part_7").removeClass("display");
+		$(".arrow_7").show();
+	})
+	$("#part_8_arrow_ne").click(function(){
+		$("#part_8").addClass("display");
+		$(".arrow_8").hide();
+		$("#part_9").removeClass("display");
+		$(".arrow_9").show();
+	})
+	$("#part_9_arrow_pre").click(function(){
+		$("#part_9").addClass("display");
+		$(".arrow_9").hide();
+		$("#part_8").removeClass("display");
+		$(".arrow_8").show();
+	})
+	$("#part_9_arrow_ne").click(function(){
+		$("#part_9").addClass("display");
+		$(".arrow_9").hide();
+		$("#part_1").removeClass("display");
+		$(".arrow_1").show();
+	})
+	// $("#part_9").click(function(){
+	// 	$(".vertual_class").hide();
+	// 	$(".display").hide();
+	// 	$("#propo_shield").show();
+	// })
+
+	$(document).keyup(function(e){
+        var key =  e.which;
+        if(key == 27){
+        	$(".vertual_class").hide();
+        	$(".extra_class").hide();
+        	$(".arrow").hide();
+        	$("#exit").hide();
+			$("#propo_shield").show();
+			$(".background_head").show();
+			$(".home_foot").show();
+			$(".end_background").show();
+			window.location.href = "#propo_shield";
+        }
+    });
 	//click shield end
 
 
@@ -192,8 +329,10 @@
 
 <!--Proposal-->
 <div id="propo_shield">
-	<center><p id="propo_1">Proposal</p></center>
-	<center><p id="propo_2">PRESS TO ENTER</p></center>
+	<center><div id="propo_window">
+		<p id="propo_1">Proposal</p>
+		<p id="propo_2">PRESS TO ENTER</p>
+	</div></center>
 </div>
 <!--Proposal-->
 
@@ -203,7 +342,7 @@
 <div class="part_public display" id="part_1">
 	<img src="images/idea2.png" class="img_public img_left" id="part_1_img"/>
 	<div class="article_public article_right">
-		<p>The problem</p><br/>
+		<p> PART 1: The problem</p><br/>
 		<p>
 			There are 1.2 million international students in the US, all of whom, on average, got the lowest scores in their Speaking section of the Test Of English as a Foreign Language (TOEFL). Our hypothesis is that not being understood makes it hard for students to reach the audience while presenting, discourage them from class participation and acts as an obstacle for social integration. Athena will help them overcome these obstacles by providing a quick way to let them say what they want to say with the correct English pronunciation. 
 		</p><br/>
@@ -218,9 +357,11 @@
 <div class="part_public display" id="part_2">
 	<img src="images/iphone2.png" class="img_public img_right" id="part_2_img"/>
 	<div class="article_public article_left">
-		<p>Sources</p><br/>
-		<p>https://www.ets.org/s/toefl/pdf/94227_unlweb.pdf</p><br/>
-		<p>http://www.cbsnews.com/news/language-barriers-cause-problems/</p>
+		<p>PART 2: Sources</p><br/>
+		<ul id="part_2_link">
+			<li><a href="https://www.ets.org/s/toefl/pdf/94227_unlweb.pdf" target="_blank">https://www.ets.org/s/toefl/pdf/94227_unlweb.pdf</a></li><br/>
+			<li><a href="http://www.cbsnews.com/news/language-barriers-cause-problems/" target="_blank">http://www.cbsnews.com/news/language-barriers-cause-problems/</a></li>
+		</ul>
 	</div>
 </div>
 <!--Part 2-->
@@ -230,7 +371,7 @@
 <div class="part_public display" id="part_3">
 	<img src="images/idea2.png" class="img_public img_left" id="part_3_img"/>
 	<div class="article_public article_right">
-		<p>The solution</p><br/>
+		<p>PART 3: The solution</p><br/>
 		<p>
 			Today, there is plenty of mobile applications and software intended to train the users in English pronunciation. These applications are structured in an English course manner, where the user goes through different levels of knowledge and evolves through time. They offer an academic approach where each sound is to be practised based on fixed words that are provided. There are tools that outperform others, and those are normally paid. While the pronunciation feedback is present for free text that the user input, that is normally one of the complementary features of the app. However, Athena approach is different since it focuses on other profile of users:  those who are looking for a fast, straightforward feedback on their speech pronunciation. 
 		</p><br/>
@@ -246,7 +387,7 @@
 
 <!--Part 4-->
 <div id="part_4" class="display">
-	<p>Needfinding</p><br/>
+	<p>PART 4: Needfinding</p><br/>
 	<p>
 		We will be using two needfinding techniques in order to better understand our customers and target market. Specifically, they are online surveys, and personal interviews​. We chose online surveys so that we could get answers to general questions related to our problem and product, for a mass audience. It would allow us to better gauge who exactly our target customer is through a large pool of data.
 	</p><br/>
@@ -266,7 +407,7 @@
 <!--Part 5-->
 <div class="part_public display" id="part_5">
 	<div class="article_public article_right">
-		<p>Prototyping</p><br/>
+		<p>PART 5: Prototyping</p><br/>
 		<p>
 			For prototyping, we will be implementing three prototyping techniques. Specifically, they are storyboarding, paper prototyping, and wireframes​. We will be using storyboarding in order to show what type of situations would merit using our app/website. The results of the needfinding will allow to show the personas and situations under which these personas would use the app.
 		</p><br/>
@@ -288,7 +429,7 @@
 
 <!--Part 6-->
 <div id="part_6" class="display">
-	<p>Implementation</p><br/>
+	<p>PART 6: Implementation</p><br/>
 	<p>
 		Athena is going to have features that will allow users to improve their English pronunciation. With Athena, the user will have an user account that will keep track of their pronunciation progress. The user will be able to record themselves speaking a word in English, and then type in that word to the app. The app will then play back the proper pronunciation of the word and provide a score of how close their pronunciation was to the proper pronunciations.
 	</p><br/>
@@ -320,7 +461,7 @@
 <!--Part 7-->
 <div class="part_public display" id="part_7">
 	<div class="article_public article_right">
-		<p>User Study/Evaluation</p><br/>
+		<p>PART 7: User Study/Evaluation</p><br/>
 		<p>
 			Our hypothesis while conducting evaluation studies is that the users who use the Athena app will benefit the most in their pronunciation skills, compared to users who do not use any tools as well as users who using competitive apps in the market. The experiment will be conducted as follows: Each participant would be given a paragraph to read. The participant would first say the paragraph without prior practice, then take 10-15 minutes of time in order to learn the paragraph better using various mediums outlined further. After the time is up, the participant will again read the paragraph. An impartial judge would determine the improvement in pronunciation of the participant. The metrics we will be using in order to determine the result of the experiment are understandability of participant, ease of use of app, and user ratings.
 		</p>
@@ -332,13 +473,13 @@
 <!--Part 8-->
 <div class="part_public display" id="part_8">
 	<div class="article_public article_left">
-		<p>Experiment Guidelines</p><br/>
+		<p>PART 8: Experiment Guidelines</p><br/>
 		<p>
 			There will be 15 participants who are divided into 3 different groups.We will choose individuals who range from average speaking to poor skills in English. These individuals will be from various ethnic and cultural backgrounds in equal proportions in all the 3 groups so that error is minimized.
 		</p>
 		<p>
 			One of the three groups is the control group where the participants do not use any tools or techniques to help improve their pronunciation skills. The second group will use Google in order to better their pronunciation. The third group will be using Athena in order to help improve their pronunciation. After the experiment is run, we will test to see which group saw the most improvement in their performance. This is a between subjects study.
-		</p>
+		</p><br/>
 		<p>
 			The factors which will remain constant are time spent on one project, the presentation itself, and day the experiment is conducted for participants.
 		</p>
@@ -352,7 +493,7 @@
 <!--Part 9-->
 <div class="part_public display" id="part_9">
 	<div class="article_public article_right">
-		<p>Fallback Plan</p><br/>
+		<p>PART 9: Fallback Plan</p><br/>
 		<p>
 			 If the program does not work out fine, we can do some evaluation survey to all those participants talking about their feeling after perform the three programs separately.  If the results for all participants set equal weight to our App and to the comparative App, we will just enlarge the population to do the survey again.  One feature which we propose is that a user’s presentation should be able to be connected to the app so that pronunciation of words in the presentation can be taught to the user. Though it would be a good addition to the app, we feel that it is difficult to implement and hence can be justified as a risky feature. If, at the end, this feature does not work as intended, we are comfortable with removing this functionality. The reason behind doing so, is because this is not the main functionality of the app, it is simply an add on.
 		</p>
@@ -363,31 +504,74 @@
 
 </div>
 
+
+<!--extra-->
+<div class="extra_class">
 <!--part 3 extra-->
 <!-- <div class="vertual_class display" id="part_3_extra">
 	<img src="images/evaluation2.png" class="img_public img_left display" id="part_3_extra_img"/>
 </div> -->
 <!--part 3 extra end-->
 
-<div class="extra_class">
 <!--part 4 extra-->
-<div class="vertual_class display" id="part_4_extra">
-	<img src="images/evaluation2.png" class="img_public img_right display" id="part_4_extra_img"/>
+<div class="display" id="part_4_extra">
 </div>
+<img src="images/evaluation2.png" class="img_public img_right display" id="part_4_extra_img"/>
 <!--part 4 extra end-->
 
 <!--part 6 extra-->
-<div class="vertual_class display" id="part_6_extra">
-	<img src="images/evaluation2.png" class="img_public img_right display" id="part_4_extra_img"/>
+<div class="display" id="part_6_extra">
 </div>
+<img src="images/evaluation2.png" class="img_public img_right display" id="part_6_extra_img"/>
 <!--part 6 extra end-->
 </div>
+<!--extra end-->
+
+<div class="arrow">
+<!--arrow-->
+<div class="arrow_1">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_1_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_1_arrow_ne"/>
+</div>
+<div class="arrow_2">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_2_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_2_arrow_ne"/>
+</div>
+<div class="arrow_3">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_3_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_3_arrow_ne"/>
+</div>
+<div class="arrow_4">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_4_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_4_arrow_ne"/>
+</div>
+<div class="arrow_5">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_5_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_5_arrow_ne"/>
+</div>
+<div class="arrow_6">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_6_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_6_arrow_ne"/>
+</div>
+<div class="arrow_7">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_7_arrow_pre"/>
+	<img src="images/arrow_ne.png"  class="arrow_ne"id="part_7_arrow_ne"/>
+</div>
+<div class="arrow_8">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_8_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_8_arrow_ne"/>
+</div>
+<div class="arrow_9">
+	<img src="images/arrow_pre.png" class="arrow_pre" id="part_9_arrow_pre"/>
+	<img src="images/arrow_ne.png" class="arrow_ne" id="part_9_arrow_ne"/>
+</div>
+<!--arrow end-->
+</div>
 
 
-
-<!-- <img src="images/test.png" class="fixed" id="part_1_img_2"/>
-<img src="images/test.png" class="fixed" id="part_2_img_2"/> -->
-
+<!--exit-->
+<p id="exit">PRESS ESC TO EXIT</p>
+<!--exit end-->
 
 
 

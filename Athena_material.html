@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta  http-equiv="description" content="" />
+<meta http-equiv="keywords" content="" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<title>Athena</title>
+<link rel="stylesheet" href="css/home.css" type="text/css" />
+<link rel="stylesheet" href="css/material.css" type="text/css" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="http://res.quan.tm/Resources/js/jquery/jquery-2.0.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+<script type="text/javascript" src="https://raw.github.com/LarryBattle/Ratio.js/master/src/Ratio.js"></script>  
+<script type="text/javascript" src="https://raw.github.com/LarryBattle/Ratio.js/master/tests/js/Ratio-testcases.js"></script>
+<script type="text/javascript" src="https://rawgit.com/jakerella/jquery-mockjax/master/dist/jquery.mockjax.js"></script>-->
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+
+$(function(){
+	//click show title
+	$(document).ready(function(){
+		$("#tagContent0_l").parent().attr("class","current");
+		$('.tags_row a').click(function(e){
+			e.preventDefault();
+			$(".tags_row li").attr("class","");
+			$(this).parent().attr("class","current");
+			window.location.href=$(this).attr("href");
+			})
+	})
+	//click show title
+	
+
+	//athena app
+	$('.athena_app img:first').siblings().hide();
+	setInterval(function(){
+	    $('.athena_app img:visible').fadeOut('slow', function(){
+	    $(this).next('img')[0] === undefined ? $('.athena_app img:first').fadeIn("slow") : $(this).next('img').fadeIn("slow");
+	    });
+	}, 1000*3);
+	//athena app end
+})
+</script>
+
+<!--head-->
+<div class="background_head">
+	<div class="label_head">
+		<a href="Athena_home.html" class="label_head_link"><img src="images/1.png" id="label_head_label"/></a>
+		<a href="Athena_home.html" class="label_head_link"><img src="images/Athena.png" id="label_head_title"/></a>
+		<div class="tags_row" valign="right">
+		    
+			<ul>
+		      <li><a href="Athena.html">HOME</a></li>
+		      <li><a href="Athena.html#work_jump">HOW IT WORKS</a></li> 
+		      <li><a href="Athena_proposal.html#propo_shield">PROPOSAL</a></li>
+		      <li><a href="Athena_timeline.html#athena_timeline">TIMELINE</a></li>
+		      <li><a href="Athena_material.html#material" id="tagContent0_l">MATERIAL</a></li>
+		      <li><a href="Athena_aboutus.html#aboutus_back">ABOUT US</a></li> 
+		    </ul>
+	    </div>
+	</div>
+	<div class="athena_head">
+		<div class="athena_app">
+			<img src="images/app_1.png"/>
+			<img src="images/app_2.png"/>
+			<img src="images/app_3.png"/>
+			<img src="images/app_4.png"/>
+			<img src="images/app_5.png"/>
+			<img src="images/app_6.png"/>
+			<img src="images/app_7.png"/>
+			<img src="images/app_8.png"/>
+		</div>
+		<div class="athena_head_intro">
+			<p id="athena_head_intro_1">Need to improve your English pronunciation?      <span style="color:#f8356d;">ATHENA </span>is the answer</p>
+			<p id="athena_head_intro_2">The tool you were looking for to practice your speech, learn how to pronunce that entangled word, help you distringuish between similar sounding words, help your speaking being understood and more!</p>
+		</div>
+	</div>
+</div>
+<!--head-->
+
+<div id="material">
+<!--Concept Video-->
+<div class="material_work">
+<p class="material_title">Concept Video</p>
+<div class="vedio_frame header">
+	<video src="images/Athena_Concept_Video.mp4" controls="controls"></video>
+</div>
+</div>
+<!--Concept Video end-->
+
+<!--Mobile APP Introduction Video-->
+<div class="material_work">
+<p class="material_title">Mobile APP Introduction</p>
+<div class="vedio_frame header">
+	<video src="images/Video_Athena.mp4" controls="controls"></video>
+</div>
+</div>
+<!--Mobile APP Introduction Video end-->
+
+
+
+
+<!--Poster-->
+<div class="material_work">
+<p class="material_title">Athena Poster</p>
+<img src="images/Athena_poster.jpeg" class="poster"/>
+</div>
+<!--Poster end-->
+
+<!--Real Time Condition Video-->
+<div class="material_work survey">
+<p class="material_title survey_title">Real Condition Video</p>
+<a href="https://www.youtube.com/watch?v=8wKQd2XnR-4" class="material_link"><p>https://www.youtube.com/watch?v=8wKQd2XnR-4</p></a>
+</div>
+<!--Real Time Condition Video end-->
+
+<!--User Test Video-->
+<div class="material_work survey">
+<p class="material_title survey_title">User Test Video</p>
+<a href="https://www.youtube.com/watch?v=rsG5U8SIrac&feature=youtu.be" class="material_link"><p>https://www.youtube.com/watch?v=rsG5U8SIrac&feature=youtu.be</p></a>
+</div>
+<!--User Test Video end-->
+
+<!--Survey Motivation-->
+<div class="material_work survey">
+<p class="material_title survey_title">Survey for our Motivation</p>
+<a href="https://docs.google.com/forms/d/1IQX-VsDT-geA1vcV2wALZh0h4XZ9mmH0RLVU4OGmuDg/edit" class="material_link"><p>https://docs.google.com/forms/d/1IQX-VsDT-geA1vcV2wALZh0h4XZ9mmH0RLVU4OGmuDg/edit</p></a>
+</div>
+<!--Survey Motivation end-->
+
+<!--Survey Evaluation-->
+<div class="material_work survey">
+<p class="material_title survey_title">Survey for User Evaluation</p>
+<a href="https://docs.google.com/forms/d/1niStLMoZ9v13qmKnoGrVGN5yPydb6ZiHbp1Apc2Oj2o/edit?ts=58fd18e8" class="material_link"><p>https://docs.google.com/forms/d/1niStLMoZ9v13qmKnoGrVGN5yPydb6ZiHbp1Apc2Oj2o/edit?ts=58fd18e8</p></a>
+</div>
+<!--Survey Evaluation end-->
+
+</div>
+
+<!--foot-->
+<div class="home_foot">
+	<div class="foot_group">
+		<div>
+			<p class="foot_title">About Us</p>
+			<p class="foot_detail">We are a group of 5 undergraduate and graduate students from University of Rochester. This is the result of our project for Human Computer Interaction and we hope you enjoy our product as much as we enjoy creating it!</p>
+		</div>
+		<div>
+			<p class="foot_title">Quick Links</p>
+			<a href="" class="foot_web">Human Computer Interaction</a>
+			<a href="" class="foot_web">University of Rochester</a>
+		</div>
+		<div>
+			<p class="foot_title">Find Us On</p>
+			<a href=""><img src="images/facebook_sign.png"/></a>
+			<a href=""><img src="images/twitter_sign.png"/></a>
+		</div>
+	</div>
+	<p class="foot_designer">A design By Florencia Spinella & Jing Sun & MD.Zilur Rahman Sama</p>
+</div>
+<!--foot end-->
+
+<!--end-->
+<div class="end_background">	
+</div>
+<!--end-->
+
+
+
+</body>

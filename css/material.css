@@ -1,0 +1,37 @@
+#material{
+	width:100%;
+	background-color:#ddd;
+}
+.material_work{
+	margin:0 auto;
+	/*height:1290px;*/
+	background-color: #ddd;
+	width:100%;
+}
+.material_title{
+	padding-top: 50px;
+	padding-bottom:10px;
+	text-align:center;
+	font-size: 25px;
+	color:#f8356d;
+}
+.material_link{
+	font-size:23px;
+	color:#000;
+	text-align:center;
+	text-decoration: underline;
+	/*height:100px;*/
+}
+.survey{
+	height:300px; 
+	border-top:1px solid #999; 
+	width:1200px;
+	margin:20px auto;
+}
+.survey_title{
+	padding-top:100px !important;
+}
+.poster{
+	width:1200px;
+	margin:5px 3%;
+}

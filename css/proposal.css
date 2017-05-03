@@ -16,12 +16,14 @@
 }
 #propo_1{
 	margin-top:20%;
-	color:#999;
+	color:#60ff00;
+	font-weight:400;
 	font-size:45px;
 }
 #propo_2{
 	color:#999;
 	font-size:25px;
+	font-weight:400px;
 }
 .extra_class{
 	display:none;
@@ -211,6 +213,17 @@
 	font-weight:bold;
 }
 /*exit end*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
